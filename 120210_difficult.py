@@ -1,4 +1,5 @@
 def guess_num(range, guesses = 1):
+    """Tries to guess a number in a range given as an array by narrowing down the range recursively"""
     candidate = range[0] + (range[1] - range[0]) / 2
     answer = raw_input("Is it " + str(candidate) + "? Answer 'h' for 'higher', 'l' for 'lower', 'r' for 'right': ")
     if answer == "h": guess_num([candidate + 1, range[1]], guesses + 1)
